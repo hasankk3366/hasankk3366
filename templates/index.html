@@ -4,31 +4,20 @@
 
 <!-- HERO -->
 <div style="margin: -1rem -1.5rem 0; padding: 0;">
-    <div style="background: linear-gradient(135deg, #b8bdf0 0%, #c8cdf5 50%, #dfe3fa 100%); border-radius: 24px; padding: 5rem 3rem; position: relative; overflow: hidden; min-height: 460px; display: flex; align-items: center;">
+    <div style="background: linear-gradient(135deg, #b8bdf0 0%, #c8cdf5 50%, #dfe3fa 100%); border-radius: 24px; padding: 5rem 3rem; position: relative; overflow: hidden; min-height: 380px; display: flex; align-items: center; justify-content: center; text-align: center;">
 
-        <!-- Mor blob (sağ tarafta, hafif) -->
+        <!-- Mor blob -->
         <div style="position: absolute; top: -30%; right: -15%; width: 70%; height: 130%; background: radial-gradient(ellipse at 60% 50%, #5b3fd4 0%, #7c5fe8 40%, transparent 75%); border-radius: 50%; filter: blur(30px); opacity: 0.85;"></div>
-        <div style="position: absolute; bottom: -40%; right: 5%; width: 50%; height: 90%; background: radial-gradient(circle at 50% 50%, #4a2fc4, transparent 75%); border-radius: 50%; filter: blur(40px); opacity: 0.6;"></div>
+        <div style="position: absolute; bottom: -40%; left: -10%; width: 50%; height: 90%; background: radial-gradient(circle at 50% 50%, #4a2fc4, transparent 75%); border-radius: 50%; filter: blur(40px); opacity: 0.5;"></div>
 
         <!-- İçerik -->
-        <div style="position: relative; z-index: 2; max-width: 540px;">
-            <h1 style="font-size: 3.2rem; font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.5rem; color: #1a1a2e;">
-                Merhaba, ben<br>
-                <span style="background: #1a1a2e; color: #fff; padding: 4px 16px 10px; border-radius: 10px; display: inline-block; margin-top: 8px;">hasankk3366</span>
+        <div style="position: relative; z-index: 2;">
+            <h1 style="font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1.1; color: #1a1a2e; margin: 0;">
+                Kişisel Web Sitem
             </h1>
-
-            <p style="font-size: 1rem; color: #3a3a55; line-height: 1.7; max-width: 420px; margin-bottom: 2rem;">
-                18 yaşındayım, web geliştirmeyi öğreniyorum. Python ve Flask ile bu siteyi sıfırdan kurdum.
+            <p style="font-size: 1.05rem; color: #3a3a55; margin-top: 1rem;">
+                Kod, projeler ve biraz da merak.
             </p>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="{{ url_for('hakkimda') }}" style="background: #1a1a2e; color: #fff; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.9rem; box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);">
-                    Beni Tanı →
-                </a>
-                <a href="{{ url_for('iletisim') }}" style="background: rgba(255,255,255,0.8); color: #1a1a2e; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border: 1.5px solid #1a1a2e;">
-                    İletişime Geç
-                </a>
-            </div>
         </div>
     </div>
 </div>
@@ -96,7 +85,7 @@
     <div class="card" style="padding: 1.8rem;">
         <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">💾</div>
         <h3 style="margin: 0 0 0.5rem;">Veritabanı</h3>
-        <p style="font-size: 0.9rem; margin: 0;">Mesajlar ve kullanıcılar SQLite veritabanında saklanıyor.</p>
+        <p style="font-size: 0.9rem; margin: 0;">Mesajlar ve kullanıcılar PostgreSQL'de saklanıyor.</p>
     </div>
 
     <div class="card" style="padding: 1.8rem;">
