@@ -1,19 +1,122 @@
 {% extends "base.html" %}
 {% block baslik %}Anasayfa — hasankk3366{% endblock %}
 {% block icerik %}
-<div class="card">
-    <h1>Merhaba, ben <span class="gradient-text">Hasan</span>. 👋</h1>
-    <p style="font-size: 1.05rem;">Bu, benim kişisel köşem. Python ve Flask ile sıfırdan kodladım.</p>
 
-    <h3>🚀 Neler yapıyorum?</h3>
-    <p>Web geliştirme öğreniyorum. Bu site, öğrendiklerimin canlı bir örneği.</p>
+<!-- HERO (açık renkli, referans tarzı) -->
+<div style="margin: -1rem -1.5rem 0; padding: 0;">
+    <div style="background: linear-gradient(160deg, #c5c9f5 0%, #b0b7f2 40%, #e8eafc 100%); border-radius: 24px; padding: 5rem 3rem; position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center;">
 
-    <h3>💡 Neler var burada?</h3>
-    <p>Hakkımda sayfasında beni tanıyabilir, iletişim sayfasından bana ulaşabilirsin. Mesajların anında telefonuma düşüyor. 📱</p>
+        <!-- Mor blob şekilleri -->
+        <div style="position: absolute; top: -20%; right: -10%; width: 65%; height: 120%; background: radial-gradient(ellipse at 50% 50%, #5b3fd4 0%, #3d28a8 45%, transparent 80%); border-radius: 45% 55% 55% 45%; filter: blur(15px); opacity: 0.9;"></div>
+        <div style="position: absolute; top: 10%; right: 15%; width: 45%; height: 70%; background: radial-gradient(circle at 50% 50%, #7c5fe8 0%, #5b3fd4 60%, transparent 95%); border-radius: 55% 45% 40% 60%; filter: blur(25px); opacity: 0.85;"></div>
+        <div style="position: absolute; bottom: -25%; right: -5%; width: 55%; height: 70%; background: radial-gradient(circle at 50% 50%, #4a2fc4, #2e1a8a 70%, transparent 100%); border-radius: 40% 60% 50% 50%; filter: blur(30px); opacity: 0.75;"></div>
+        <div style="position: absolute; top: 30%; right: 8%; width: 25%; height: 40%; background: radial-gradient(circle, #9b85ee, transparent 75%); filter: blur(20px); opacity: 0.7;"></div>
 
-    <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        <a href="{{ url_for('hakkimda') }}" class="btn">Beni Tanı →</a>
-        <a href="{{ url_for('iletisim') }}" class="btn" style="background: var(--bg-card); border: 1px solid var(--border); box-shadow: none;">İletişime Geç</a>
+        <!-- İçerik -->
+        <div style="position: relative; z-index: 2; max-width: 520px;">
+            <div style="display: inline-block; padding: 5px 14px; border-radius: 100px; background: rgba(255,255,255,0.5); border: 1px solid rgba(91, 63, 212, 0.2); color: #3d28a8; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.3px;">
+                ● Şu an öğreniyorum
+            </div>
+
+            <h1 style="font-size: 4rem; font-weight: 900; letter-spacing: -3px; line-height: 1; margin-bottom: 1.5rem; color: #1a1a2e; display: flex; flex-wrap: wrap; gap: 6px;">
+                <span style="display: inline-block; padding: 4px 12px 8px; color: #ffffff; background: #1a1a2e; border-radius: 8px;">Hasan</span><span style="display: inline-block; padding: 4px 14px 8px; color: #1a1a2e; background: #a8e6b8; border-radius: 8px;">3366</span>
+            </h1>
+
+            <p style="font-size: 1rem; color: #3a3a55; line-height: 1.7; max-width: 440px; margin-bottom: 2rem;">
+                18 yaşındayım ve web geliştirmeyi öğreniyorum. Python, Flask ve biraz da merakla bu siteyi sıfırdan kurdum.
+            </p>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="{{ url_for('hakkimda') }}" style="background: #1a1a2e; color: #fff; padding: 13px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.92rem; box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25); display: inline-flex; align-items: center; gap: 8px;">
+                    Beni Tanı →
+                </a>
+                <a href="{{ url_for('iletisim') }}" style="background: rgba(255,255,255,0.7); color: #1a1a2e; padding: 13px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.92rem; border: 1.5px solid #1a1a2e;">
+                    İletişime Geç
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- ATATÜRK SÖZÜ -->
+<div class="card" style="margin-top: 2rem; text-align: center; padding: 2.5rem 2rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(6, 182, 212, 0.08)); border-color: rgba(124, 58, 237, 0.25); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -30px; left: 20px; font-size: 8rem; font-family: Georgia, serif; color: rgba(124, 58, 237, 0.15); line-height: 1;">"</div>
+
+    <div style="position: relative; z-index: 2;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent2); letter-spacing: 2px; margin-bottom: 1rem; text-transform: uppercase;">🇹🇷 Mustafa Kemal Atatürk</div>
+
+        <p style="font-size: 1.35rem; font-weight: 600; color: var(--text); line-height: 1.5; max-width: 640px; margin: 0 auto 1rem; font-style: italic;">
+            "Hayatta en hakiki mürşit ilimdir, fendir."
+        </p>
+
+        <div style="width: 40px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; margin: 0 auto;"></div>
+    </div>
+</div>
+
+<!-- İSTATİSTİKLER (koyu tema) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 2rem;">
+
+    <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">2026</div>
+        <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; font-weight: 600;">Kuruluş yılı</div>
+    </div>
+
+    <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">%100</div>
+        <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; font-weight: 600;">Kendi emeği</div>
+    </div>
+
+    <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">0₺</div>
+        <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; font-weight: 600;">Maliyet</div>
+    </div>
+
+    <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div style="font-size: 1.9rem; font-weight: 900; letter-spacing: -1px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">7/24</div>
+        <div style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px; font-weight: 600;">Açık</div>
+    </div>
+
+</div>
+
+<!-- NELER VAR -->
+<div style="text-align: center; margin: 3rem 0 1.5rem;">
+    <h2 style="margin-bottom: 0.5rem;">Bu sitede neler var?</h2>
+    <p>Küçük ama işleyen bir sistem.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+
+    <div class="card" style="padding: 1.8rem;">
+        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">📬</div>
+        <h3 style="margin: 0 0 0.5rem;">İletişim Sistemi</h3>
+        <p style="font-size: 0.9rem; margin: 0;">Mesajlar anında telefonuma düşüyor. Telegram bot ile bağlı.</p>
+    </div>
+
+    <div class="card" style="padding: 1.8rem;">
+        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">🔐</div>
+        <h3 style="margin: 0 0 0.5rem;">Üyelik Sistemi</h3>
+        <p style="font-size: 0.9rem; margin: 0;">Kayıt ol, giriş yap. Şifreler güvenle saklanıyor.</p>
+    </div>
+
+    <div class="card" style="padding: 1.8rem;">
+        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">💾</div>
+        <h3 style="margin: 0 0 0.5rem;">Veritabanı</h3>
+        <p style="font-size: 0.9rem; margin: 0;">Mesajlar ve kullanıcılar SQLite veritabanında saklanıyor.</p>
+    </div>
+
+    <div class="card" style="padding: 1.8rem;">
+        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(251, 146, 60, 0.15); border: 1px solid rgba(251, 146, 60, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">☁️</div>
+        <h3 style="margin: 0 0 0.5rem;">Ücretsiz Hosting</h3>
+        <p style="font-size: 0.9rem; margin: 0;">Render ile internete taşındı. Sıfır maliyet.</p>
+    </div>
+
+</div>
+
+<!-- CTA -->
+<div class="card" style="text-align: center; margin-top: 2rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1)); border-color: rgba(124, 58, 237, 0.3);">
+    <h2 style="margin-bottom: 0.75rem;">Bir şey söylemek ister misin? 💬</h2>
+    <p style="max-width: 480px; margin: 0 auto 1.5rem;">Fikrini, önerini ya da sadece bir "merhaba"yı paylaş.</p>
+    <a href="{{ url_for('iletisim') }}" class="btn" style="padding: 14px 32px;">Mesaj Gönder →</a>
+</div>
+
 {% endblock %}
