@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block baslik %}İletişim — hasankk3366{% endblock %}
+{% block icerik %}
+    <h2>İletişim</h2>
+    <p>Bana mesaj bırakabilirsin:</p>
+
+    {% if basarili %}
+        <div class="basari">✅ Mesajın başarıyla gönderildi! Teşekkürler.</div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="isim">İsmin:</label>
+        <input type="text" id="isim" name="isim" required>
+
+        <label for="mesaj">Mesajın:</label>
+        <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+        <button type="submit">Gönder</button>
+    </form>
+{% endblock %}
