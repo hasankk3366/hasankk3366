@@ -2,35 +2,30 @@
 {% block baslik %}Anasayfa — hasankk3366{% endblock %}
 {% block icerik %}
 
-<!-- HERO (açık renkli, referans tarzı) -->
+<!-- HERO -->
 <div style="margin: -1rem -1.5rem 0; padding: 0;">
-    <div style="background: linear-gradient(160deg, #c5c9f5 0%, #b0b7f2 40%, #e8eafc 100%); border-radius: 24px; padding: 5rem 3rem; position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center;">
+    <div style="background: linear-gradient(135deg, #b8bdf0 0%, #c8cdf5 50%, #dfe3fa 100%); border-radius: 24px; padding: 5rem 3rem; position: relative; overflow: hidden; min-height: 460px; display: flex; align-items: center;">
 
-        <!-- Mor blob şekilleri -->
-        <div style="position: absolute; top: -20%; right: -10%; width: 65%; height: 120%; background: radial-gradient(ellipse at 50% 50%, #5b3fd4 0%, #3d28a8 45%, transparent 80%); border-radius: 45% 55% 55% 45%; filter: blur(15px); opacity: 0.9;"></div>
-        <div style="position: absolute; top: 10%; right: 15%; width: 45%; height: 70%; background: radial-gradient(circle at 50% 50%, #7c5fe8 0%, #5b3fd4 60%, transparent 95%); border-radius: 55% 45% 40% 60%; filter: blur(25px); opacity: 0.85;"></div>
-        <div style="position: absolute; bottom: -25%; right: -5%; width: 55%; height: 70%; background: radial-gradient(circle at 50% 50%, #4a2fc4, #2e1a8a 70%, transparent 100%); border-radius: 40% 60% 50% 50%; filter: blur(30px); opacity: 0.75;"></div>
-        <div style="position: absolute; top: 30%; right: 8%; width: 25%; height: 40%; background: radial-gradient(circle, #9b85ee, transparent 75%); filter: blur(20px); opacity: 0.7;"></div>
+        <!-- Mor blob (sağ tarafta, hafif) -->
+        <div style="position: absolute; top: -30%; right: -15%; width: 70%; height: 130%; background: radial-gradient(ellipse at 60% 50%, #5b3fd4 0%, #7c5fe8 40%, transparent 75%); border-radius: 50%; filter: blur(30px); opacity: 0.85;"></div>
+        <div style="position: absolute; bottom: -40%; right: 5%; width: 50%; height: 90%; background: radial-gradient(circle at 50% 50%, #4a2fc4, transparent 75%); border-radius: 50%; filter: blur(40px); opacity: 0.6;"></div>
 
         <!-- İçerik -->
-        <div style="position: relative; z-index: 2; max-width: 520px;">
-            <div style="display: inline-block; padding: 5px 14px; border-radius: 100px; background: rgba(255,255,255,0.5); border: 1px solid rgba(91, 63, 212, 0.2); color: #3d28a8; font-size: 0.78rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.3px;">
-                ● Şu an öğreniyorum
-            </div>
-
-            <h1 style="font-size: 4rem; font-weight: 900; letter-spacing: -3px; line-height: 1; margin-bottom: 1.5rem; color: #1a1a2e; display: flex; flex-wrap: wrap; gap: 6px;">
-                <span style="display: inline-block; padding: 4px 12px 8px; color: #ffffff; background: #1a1a2e; border-radius: 8px;">Hasan</span><span style="display: inline-block; padding: 4px 14px 8px; color: #1a1a2e; background: #a8e6b8; border-radius: 8px;">3366</span>
+        <div style="position: relative; z-index: 2; max-width: 540px;">
+            <h1 style="font-size: 3.2rem; font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.5rem; color: #1a1a2e;">
+                Merhaba, ben<br>
+                <span style="background: #1a1a2e; color: #fff; padding: 4px 16px 10px; border-radius: 10px; display: inline-block; margin-top: 8px;">hasankk3366</span>
             </h1>
 
-            <p style="font-size: 1rem; color: #3a3a55; line-height: 1.7; max-width: 440px; margin-bottom: 2rem;">
-                18 yaşındayım ve web geliştirmeyi öğreniyorum. Python, Flask ve biraz da merakla bu siteyi sıfırdan kurdum.
+            <p style="font-size: 1rem; color: #3a3a55; line-height: 1.7; max-width: 420px; margin-bottom: 2rem;">
+                18 yaşındayım, web geliştirmeyi öğreniyorum. Python ve Flask ile bu siteyi sıfırdan kurdum.
             </p>
 
             <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="{{ url_for('hakkimda') }}" style="background: #1a1a2e; color: #fff; padding: 13px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.92rem; box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25); display: inline-flex; align-items: center; gap: 8px;">
+                <a href="{{ url_for('hakkimda') }}" style="background: #1a1a2e; color: #fff; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.9rem; box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);">
                     Beni Tanı →
                 </a>
-                <a href="{{ url_for('iletisim') }}" style="background: rgba(255,255,255,0.7); color: #1a1a2e; padding: 13px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.92rem; border: 1.5px solid #1a1a2e;">
+                <a href="{{ url_for('iletisim') }}" style="background: rgba(255,255,255,0.8); color: #1a1a2e; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border: 1.5px solid #1a1a2e;">
                     İletişime Geç
                 </a>
             </div>
@@ -53,7 +48,7 @@
     </div>
 </div>
 
-<!-- İSTATİSTİKLER (koyu tema) -->
+<!-- İSTATİSTİKLER -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 2rem;">
 
     <div class="card" style="text-align: center; padding: 1.5rem;">
@@ -89,7 +84,7 @@
     <div class="card" style="padding: 1.8rem;">
         <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">📬</div>
         <h3 style="margin: 0 0 0.5rem;">İletişim Sistemi</h3>
-        <p style="font-size: 0.9rem; margin: 0;">Mesajlar anında telefonuma düşüyor. Telegram bot ile bağlı.</p>
+        <p style="font-size: 0.9rem; margin: 0;">Formu dolduran herkesin mesajı anında bana ulaşıyor.</p>
     </div>
 
     <div class="card" style="padding: 1.8rem;">
