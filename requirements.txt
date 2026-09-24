@@ -3,3 +3,5 @@ gunicorn
 flask-sqlalchemy
 flask-login
 requests
+python-dotenv
+psycopg2-binary
