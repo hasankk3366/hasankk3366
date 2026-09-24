@@ -1,10 +1,19 @@
 {% extends "base.html" %}
 {% block baslik %}Anasayfa — hasankk3366{% endblock %}
 {% block icerik %}
-    <h2>Hoş Geldiniz 👋</h2>
-    <p>Bu, <strong>hasankk3366</strong> adresinin kişisel web sitesidir.</p>
-    <br>
-    <p>Python ve Flask ile yapıldı. Zamanla buraya projeler, blog yazıları ve daha fazlasını ekleyeceğim.</p>
-    <br>
-    <p>Sağ üstteki menüden diğer sayfalara göz atabilirsin.</p>
+<div class="card">
+    <h1>Merhaba, ben <span class="gradient-text">Hasan</span>. 👋</h1>
+    <p style="font-size: 1.05rem;">Bu, benim kişisel köşem. Python ve Flask ile sıfırdan kodladım.</p>
+
+    <h3>🚀 Neler yapıyorum?</h3>
+    <p>Web geliştirme öğreniyorum. Bu site, öğrendiklerimin canlı bir örneği.</p>
+
+    <h3>💡 Neler var burada?</h3>
+    <p>Hakkımda sayfasında beni tanıyabilir, iletişim sayfasından bana ulaşabilirsin. Mesajların anında telefonuma düşüyor. 📱</p>
+
+    <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="{{ url_for('hakkimda') }}" class="btn">Beni Tanı →</a>
+        <a href="{{ url_for('iletisim') }}" class="btn" style="background: var(--bg-card); border: 1px solid var(--border); box-shadow: none;">İletişime Geç</a>
+    </div>
+</div>
 {% endblock %}

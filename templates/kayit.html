@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block baslik %}Kayıt Ol — hasankk3366{% endblock %}
+{% block icerik %}
+<div class="card" style="max-width: 420px; margin: 0 auto;">
+    <h2>Kayıt Ol</h2>
+    <p>Yeni bir hesap oluştur.</p>
+
+    <form method="POST">
+        <label for="kullanici_adi">Kullanıcı Adı</label>
+        <input type="text" id="kullanici_adi" name="kullanici_adi" required minlength="3">
+
+        <label for="email">E-posta</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="sifre">Şifre</label>
+        <input type="password" id="sifre" name="sifre" required minlength="4">
+
+        <button type="submit" style="width: 100%;">Kayıt Ol</button>
+    </form>
+
+    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+        Zaten hesabın var mı? <a href="{{ url_for('login') }}" class="gradient-text" style="text-decoration: none; font-weight: 600;">Giriş yap</a>
+    </p>
+</div>
+{% endblock %}

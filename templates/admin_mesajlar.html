@@ -1,25 +1,23 @@
 {% extends "base.html" %}
 {% block baslik %}Gelen Mesajlar — hasankk3366{% endblock %}
 {% block icerik %}
+<div class="card">
     <h2>📬 Gelen Mesajlar</h2>
-    <p style="margin-bottom: 1.5rem; color: #666;">
-        Toplam <strong>{{ mesajlar|length }}</strong> mesaj
-    </p>
+    <p style="margin-bottom: 2rem;">Toplam <strong>{{ mesajlar|length }}</strong> mesaj</p>
 
     {% if mesajlar|length == 0 %}
         <p>Henüz mesaj yok.</p>
     {% else %}
         {% for m in mesajlar %}
-        <div style="background: #f9f9f9; border-left: 4px solid #1e3c72;
-                    padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <strong>👤 {{ m.isim }}</strong>
-                <small style="color: #888;">
-                    {{ m.tarih.strftime('%d.%m.%Y %H:%M') }}
-                </small>
+        <div style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); padding: 1.2rem 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                <strong style="color: var(--text);">👤 {{ m.isim }}</strong>
+                <small style="color: var(--text-dim);">{{ m.tarih.strftime('%d.%m.%Y %H:%M') }}</small>
             </div>
-            <p style="margin: 0;">{{ m.mesaj }}</p>
+            {% if m.email %}<small style="color: var(--accent2);">📧 {{ m.email }}</small><br>{% endif %}
+            <p style="margin: 8px 0 0 0; color: var(--text);">{{ m.mesaj }}</p>
         </div>
         {% endfor %}
     {% endif %}
+</div>
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block baslik %}Giriş Yap — hasankk3366{% endblock %}
+{% block icerik %}
+<div class="card" style="max-width: 420px; margin: 0 auto;">
+    <h2>Giriş Yap</h2>
+    <p>Hesabına giriş yap.</p>
+
+    <form method="POST">
+        <label for="kullanici_adi">Kullanıcı Adı</label>
+        <input type="text" id="kullanici_adi" name="kullanici_adi" required>
+
+        <label for="sifre">Şifre</label>
+        <input type="password" id="sifre" name="sifre" required>
+
+        <button type="submit" style="width: 100%;">Giriş Yap</button>
+    </form>
+
+    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+        Hesabın yok mu? <a href="{{ url_for('kayit') }}" class="gradient-text" style="text-decoration: none; font-weight: 600;">Kayıt ol</a>
+    </p>
+</div>
+{% endblock %}
