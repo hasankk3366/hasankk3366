@@ -1,20 +1,151 @@
 {% extends "base.html" %}
 {% block baslik %}Hakkımda — hasankk3366{% endblock %}
 {% block icerik %}
-<div class="card">
-    <h2>Hakkımda</h2>
-    <p>Merhaba! Ben <strong>Hasan</strong>. Python ve web geliştirme öğreniyorum. Bu siteyi sıfırdan kodladım ve <strong>ücretsiz araçlarla</strong> internete taşıdım.</p>
 
-    <h3>🛠️ Bildiklerim</h3>
-    <ul style="color: var(--text-dim); margin-left: 1.5rem; line-height: 2;">
-        <li>Python (Flask, SQLAlchemy)</li>
-        <li>HTML & CSS</li>
-        <li>Git & GitHub</li>
-        <li>Render ile deploy</li>
-        <li>Telegram Bot API</li>
-    </ul>
-
-    <h3>🎯 Hedeflerim</h3>
-    <p>Full-stack geliştirici olmak ve kendi projelerimi hayata geçirmek. Bu site o yolculuğun ilk adımı.</p>
+<!-- PROFİL KARTI -->
+<div class="card" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; padding: 2.5rem;">
+    <div style="width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; font-weight: 800; color: white; flex-shrink: 0; box-shadow: 0 8px 30px var(--accent-glow);">
+        H
+    </div>
+    <div style="flex: 1; min-width: 220px;">
+        <h2 style="margin-bottom: 0.3rem;">Hasan</h2>
+        <p style="margin: 0 0 0.5rem; color: var(--accent2); font-weight: 500;">18 yaşında · Mersin</p>
+        <p style="margin: 0;">Kod yazmayı seven, öğrenmeye aç biriyim.</p>
+    </div>
 </div>
+
+<!-- HİKAYEM -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>👋 Merhaba</h2>
+    <p>18 yaşındayım ve Mersin'de yaşıyorum. Yazılım dünyasına yeni adım attım, Python ile başladım ve o günden beri öğrenmeye devam ediyorum.</p>
+    <p>Bu site, öğrendiklerimi gerçek bir projeye dönüştürme isteğimin sonucu. Flask ile kurdum, veritabanı ekledim. Her adımda yeni bir şey öğrendim.</p>
+</div>
+
+<!-- YETENEKLER -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>🛠️ Öğrendiklerim</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1rem;">
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;">
+            <div style="font-weight: 600; color: var(--text);">Python</div>
+            <div style="font-size: 0.85rem; color: var(--text-dim);">Flask, SQLAlchemy</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;">
+            <div style="font-weight: 600; color: var(--text);">HTML & CSS</div>
+            <div style="font-size: 0.85rem; color: var(--text-dim);">Responsive tasarım</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;">
+            <div style="font-weight: 600; color: var(--text);">Git & GitHub</div>
+            <div style="font-size: 0.85rem; color: var(--text-dim);">Versiyon kontrolü</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 1rem;">
+            <div style="font-weight: 600; color: var(--text);">Deploy</div>
+            <div style="font-size: 0.85rem; color: var(--text-dim);">Render</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🎬 İZLEDİĞİM ANİMELER -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>🎬 İzlediğim Animeler</h2>
+    <p style="margin-bottom: 1.2rem;">Boş zamanlarımda anime izlemeyi severim. İşte favorilerim:</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Death Note</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Saiki</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Spirited Away</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Naruto Series</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">JoJo Series</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">High School DxD</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Dragon Ball Series</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">One Punch Man</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Overlord</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Fire Force</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Ijiranaide, Nagatoro-san</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Chainsaw Man</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Jujutsu Kaisen</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Date a Live</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Tengoku Daimakyou</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Maou Gakuin no Futekigousha</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">My Dress Up Darling</span>
+
+        <span style="background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.3); color: #67e8f9; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Tokyo Ghoul</span>
+
+        <span style="background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(124, 58, 237, 0.3); color: #a78bfa; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">One Piece <small style="opacity: 0.75;">(izliyor)</small></span>
+
+    </div>
+</div>
+
+<!-- 🎮 OYNADIĞIM OYUNLAR -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>🎮 Oynadığım Oyunlar</h2>
+    <p style="margin-bottom: 1.2rem;">Sık oynadığım ve sevdiğim oyunlar:</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Counter-Strike 2</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Minecraft</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Roblox</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Euro Truck Simulator 2</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Resident Evil 4</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Resident Evil Village</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">GTA 4</span>
+
+        <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">GTA 5</span>
+
+    </div>
+</div>
+
+<!-- 🎵 DİNLEDİĞİM MÜZİK -->
+<div class="card" style="margin-top: 1.5rem;">
+    <h2>🎵 Dinlediğim Müzik</h2>
+    <p style="margin-bottom: 1.2rem;">Kod yazarken mutlaka müzik açarım. Favorilerim:</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+
+        <span style="background: rgba(251, 146, 60, 0.15); border: 1px solid rgba(251, 146, 60, 0.3); color: #fdba74; padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; font-weight: 500;">Ezhel</span>
+
+    </div>
+</div>
+
+<!-- HEDEF -->
+<div class="card" style="margin-top: 1.5rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(6, 182, 212, 0.08)); border-color: rgba(124, 58, 237, 0.25);">
+    <h2>🚀 Hedefim</h2>
+    <p>Kendimi geliştirmeye devam edip, ileride işe yarayan projeler üretmek istiyorum. Şimdilik öğrenmeye ve üretmeye devam.</p>
+</div>
+
+<!-- CTA -->
+<div class="card" style="margin-top: 1.5rem; text-align: center;">
+    <h2 style="margin-bottom: 0.5rem;">Tanışmak ister misin? 🤝</h2>
+    <p>Bir mesaj bırak, tanışalım.</p>
+    <a href="{{ url_for('iletisim') }}" class="btn" style="margin-top: 1rem;">İletişime Geç →</a>
+</div>
+
 {% endblock %}
