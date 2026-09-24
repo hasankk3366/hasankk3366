@@ -68,6 +68,7 @@ def hakkimda():
 
 
 @app.route("/iletisim", methods=["GET", "POST"])
+@login_required
 def iletisim():
     if request.method == "POST":
         isim = request.form.get("isim")
