@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block baslik %}Gelen Mesajlar — hasankk3366{% endblock %}
+{% block icerik %}
+    <h2>📬 Gelen Mesajlar</h2>
+    <p style="margin-bottom: 1.5rem; color: #666;">
+        Toplam <strong>{{ mesajlar|length }}</strong> mesaj
+    </p>
+
+    {% if mesajlar|length == 0 %}
+        <p>Henüz mesaj yok.</p>
+    {% else %}
+        {% for m in mesajlar %}
+        <div style="background: #f9f9f9; border-left: 4px solid #1e3c72;
+                    padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <strong>👤 {{ m.isim }}</strong>
+                <small style="color: #888;">
+                    {{ m.tarih.strftime('%d.%m.%Y %H:%M') }}
+                </small>
+            </div>
+            <p style="margin: 0;">{{ m.mesaj }}</p>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
