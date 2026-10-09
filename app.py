@@ -1,7 +1,7 @@
 import os
 import requests
 from datetime import datetime
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -10,11 +10,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "gizli-anahtar-degistir")
 
 # ── Veritabanı Ayarları ──
-# Render'da DATABASE_URL çevre değişkeni olur (PostgreSQL)
-# Yerelde yoksa SQLite kullanır
 database_url = os.environ.get("DATABASE_URL", "sqlite:///site.db")
 
-# PostgreSQL URL'sini psycopg2 sürücüsüyle kullanacak şekilde düzelt
 if database_url.startswith("postgres://"):
     database_url = database_url.replace("postgres://", "postgresql+psycopg2://", 1)
 elif database_url.startswith("postgresql://"):
@@ -68,6 +65,35 @@ def telegram_bildirim_gonder(isim, mesaj):
         print(f"Telegram hatası: {e}")
 
 
+# ── SEO: sitemap.xml ve robots.txt ──
+@app.route("/sitemap.xml")
+def sitemap():
+    sayfalar = [
+        {"loc": url_for("index", _external=True), "priority": "1.0"},
+        {"loc": url_for("hakkimda", _external=True), "priority": "0.8"},
+        {"loc": url_for("iletisim", _external=True), "priority": "0.6"},
+        {"loc": url_for("login", _external=True), "priority": "0.4"},
+        {"loc": url_for("kayit", _external=True), "priority": "0.4"},
+    ]
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for s in sayfalar:
+        xml += f'  <url>\n    <loc>{s["loc"]}</loc>\n    <priority>{s["priority"]}</priority>\n  </url>\n'
+    xml += '</urlset>'
+    return Response(xml, mimetype="application/xml")
+
+
+@app.route("/robots.txt")
+def robots():
+    icerik = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /admin/\n"
+        f"Sitemap: {url_for('sitemap', _external=True)}\n"
+    )
+    return Response(icerik, mimetype="text/plain")
+
+
 # ── Sayfalar ──
 @app.route("/")
 def index():
@@ -111,7 +137,6 @@ def kayit():
             flash("Bu e-posta zaten kayıtlı.", "hata")
             return redirect(url_for("kayit"))
 
-        # İlk kullanıcı otomatik admin olur
         ilk_kullanici = User.query.count() == 0
         yeni = User(
             kullanici_adi=kullanici_adi,
